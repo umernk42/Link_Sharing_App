@@ -1,6 +1,8 @@
-import { useState } from "react";
+import {useEffect } from "react";
 
 function Link({ count, setLinks, link, nameOfsites }) {
+
+
 
     const handleLinkChange = (e) => {
         const value = e.target.value;
@@ -28,15 +30,18 @@ function Link({ count, setLinks, link, nameOfsites }) {
         });
     }
 
+    console.log(link);
     return (
         <>
             <div className="link">
                 <h2>Link#{count + 1}</h2>
 
                 <label htmlFor="siteName">Name of Site</label>
-                <select name="siteName" onChange={handleLinkChange}>  
+                <select name="siteName" value={link.siteName} onChange={handleLinkChange} >  
                     {
-                        nameOfsites.map((site,index) => (<option key={index} value={site}>{site}</option>))
+                        nameOfsites.map((site,index) => {
+                            return(<option key={index} value={site}>{site}</option>)
+                            })
                     }
                 </select>
 

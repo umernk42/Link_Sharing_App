@@ -1,7 +1,6 @@
 
 function Preview({ links, profile }) {
 
-    console.log(links);
 
     return (
         <>

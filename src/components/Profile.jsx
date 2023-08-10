@@ -1,6 +1,6 @@
+import Preview from "./Preview";
 
-
-function Profile({ profile, setProfile }) {
+function Profile({ links,profile, setProfile }) {
 
     const handleImageUpload = (e) => {
         const file = e.target.files[0]; // Get the selected file
@@ -59,6 +59,8 @@ function Profile({ profile, setProfile }) {
 
                 </form>
             </div>
+            <hr />
+            <Preview links={links} profile={profile} />
         </>
     )
 }
