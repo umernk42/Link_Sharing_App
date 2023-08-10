@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import LinkForm from './components/LinkForm';
 import Profile from './components/Profile';
+import Preview from './components/Preview';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
     <>
       <LinkForm links={links} setLinks={setLinks} nameOfsites={nameOfsites} />
       <Profile profile={profile} setProfile={setProfile} />
+      <Preview links={links} profile={profile} />
     </>
   )
 }

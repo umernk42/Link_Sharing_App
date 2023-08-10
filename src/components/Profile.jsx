@@ -36,18 +36,26 @@ function Profile({ profile, setProfile }) {
             <div className="profile">
                 <form>
                     <h2>Profile</h2>
-                    <label htmlFor="profilePic">Profile Pic</label>
-                    <input type="file" name="image" accept="image/*" onChange={handleImageUpload} />
-                    {profile.profilePic && <img src={profile.profilePic} alt="Selected" style={{ width: '100px' }} />}
+                    <div className="profilePic">
+                        <label htmlFor="profilePic">Profile Pic</label>
+                        <input type="file" name="image" accept="image/*" onChange={handleImageUpload} />
+                        {profile.profilePic && <img src={profile.profilePic} alt="Selected" style={{ width: '100px' }} />}
+                    </div>
 
-                    <label htmlFor="firstName">First Name </label>
-                    <input type="text" name="firstName" value={profile.firstName} onChange={handleProfileChange} />
+                    <div className="firstName">
+                        <label htmlFor="firstName">First Name </label>
+                        <input type="text" name="firstName" value={profile.firstName} onChange={handleProfileChange} />
+                    </div>
 
-                    <label htmlFor="lastName">Last Name </label>
-                    <input type="text" name="lastName" value={profile.lastName} onChange={handleProfileChange} />
+                    <div className="lastNam">
+                        <label htmlFor="lastName">Last Name </label>
+                        <input type="text" name="lastName" value={profile.lastName} onChange={handleProfileChange} />
+                    </div>
 
-                    <label htmlFor="email">Email </label>
-                    <input type="email" name="email" value={profile.email} onChange={handleProfileChange} />
+                    <div className="email">
+                        <label htmlFor="email">Email </label>
+                        <input type="email" name="email" value={profile.email} onChange={handleProfileChange} />
+                    </div>
 
                 </form>
             </div>
