@@ -8,16 +8,18 @@ function Link({ count, setLinks, link, nameOfsites }) {
     let obj = {};
 
     if (prop === "siteName") {
-      let img = null;
+      let img = null,color = null;
 
       for (let i = 0; i < nameOfsites.length; i++) {
         if (nameOfsites[i].name === value) {
           img = nameOfsites[i].icon;
+          color = nameOfsites[i].color;
           break;
         }
       }
       obj.siteName = value;
       obj.icon = img;
+      obj.color = color;
     } else {
       obj.url = value;
     }

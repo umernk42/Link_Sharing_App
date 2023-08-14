@@ -5,22 +5,23 @@ import Preview from "./components/Preview";
 import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import * as Icons from './SvgImports'
+import Home from "./components/Home";
 
 function App() {
 
   const nameOfsites  = [
-    {name: 'Codepen',icon: Icons.Codepen},
-    {name: 'Codewars',icon: Icons.Codewars},
-    {name: 'Facebook',icon: Icons.Facebook},
-    {name: 'Freecodecamp',icon: Icons.Freecodecamp},
-    {name: 'Frontend Mentor',icon: Icons.FrontendMentor},
-    {name: 'Github',icon: Icons.Github},
-    {name: 'Gitlab',icon: Icons.Gitlab},
-    {name: 'Linkedin',icon: Icons.Linkedin},
-    {name: 'Stack Overflow',icon: Icons.StackOverflow},
-    {name: 'Twitch',icon: Icons.Twitch},
-    {name: 'Twitter',icon: Icons.Twitter},
-    {name: 'Youtube',icon: Icons.Youtube},
+    {name: 'Codepen',icon: Icons.Codepen,color: '#FFFFFF'},
+    {name: 'Codewars',icon: Icons.Codewars,color:'#8A1A50'},
+    {name: 'Facebook',icon: Icons.Facebook,color:'#2442AC'},
+    {name: 'Freecodecamp',icon: Icons.Freecodecamp,color:'#302267'},
+    {name: 'Frontend Mentor',icon: Icons.FrontendMentor,color:'#FFFFFF'},
+    {name: 'Github',icon: Icons.Github,color:'#1A1A1A'},
+    {name: 'Gitlab',icon: Icons.Gitlab,color:'#EB4925'},
+    {name: 'Linkedin',icon: Icons.Linkedin,color:'#2D68FF'},
+    {name: 'Stack Overflow',icon: Icons.StackOverflow,color:'#EC7100'},
+    {name: 'Twitch',icon: Icons.Twitch,color:'#EE3FC8'},
+    {name: 'Twitter',icon: Icons.Twitter,color:'#43B7E9'},
+    {name: 'Youtube',icon: Icons.Youtube,color:'#EE3939'},
   ]
 
   const [links, setLinks] = useState([]);
@@ -36,6 +37,7 @@ function App() {
       <NavBar />
       
       <Routes>
+        <Route path='/' element={<Home />}/>
         <Route
           path="/links"
           element={

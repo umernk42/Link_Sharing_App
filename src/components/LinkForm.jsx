@@ -7,7 +7,8 @@ function LinkForm({ profile, links, setLinks, nameOfsites }) {
     const newLink = {
       siteName: nameOfsites[0].name,    
       url: "",
-      icon: nameOfsites[0].icon
+      icon: nameOfsites[0].icon,
+      color: nameOfsites[0].color
     };
     setLinks((prev) => {
       return [...prev, newLink];

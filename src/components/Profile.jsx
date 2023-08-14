@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Preview from "./Preview";
 import { UploadImage } from "../SvgImports";
+import axios from "axios";
 
 function Profile({ links, profile, setProfile }) {
   const handleImageUpload = (e) => {
@@ -39,6 +40,8 @@ function Profile({ links, profile, setProfile }) {
       };
     });
   };
+
+
 
   return (
     <>
@@ -102,8 +105,10 @@ function Profile({ links, profile, setProfile }) {
             </div>
           </div>
         </form>
+        <hr />
+        <button>Save</button>
       </div>
-      <hr />
+
       {windowWidth > 768 && <Preview links={links} profile={profile} />}
     </>
   );

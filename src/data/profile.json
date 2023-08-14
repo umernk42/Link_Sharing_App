@@ -4,5 +4,6 @@
         "firstName": "",
         "lastName": "",
         "email": ""
-    }
+    },
+    "links": []
 }

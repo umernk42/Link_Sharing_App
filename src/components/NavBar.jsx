@@ -1,14 +1,14 @@
-import {NavLink,Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import * as Icons from '../SvgImports';
 
 function NavBar() {
     return(
         <>
             <div className="NavBar">
-                <div className="NavLogo">
+                <NavLink to='/' className="NavLogo">
                     <img className='NavLogoImg' src={Icons.LogoDevlinksSmall} alt="LogoDevlinksSmall" />
                     <h3 className='NavLogoText hide'>devLinks</h3>
-                </div>
+                </NavLink>
                 <div className="NavLinks">
                     <ul>
                         <li>
