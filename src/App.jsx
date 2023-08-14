@@ -4,20 +4,24 @@ import Profile from "./components/Profile";
 import Preview from "./components/Preview";
 import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import * as Icons from './SvgImports'
 
 function App() {
-  const nameOfsites = [
-    "GitHub",
-    "LinkedIN",
-    "Gmail",
-    "CodePen",
-    "CodeWars",
-    "Facebook",
-    "freeCodeCamp",
-    "frontEndMentor",
-    "GitLab",
-    "Twitter",
-  ];
+
+  const nameOfsites  = [
+    {name: 'Codepen',icon: Icons.Codepen},
+    {name: 'Codewars',icon: Icons.Codewars},
+    {name: 'Facebook',icon: Icons.Facebook},
+    {name: 'Freecodecamp',icon: Icons.Freecodecamp},
+    {name: 'Frontend Mentor',icon: Icons.FrontendMentor},
+    {name: 'Github',icon: Icons.Github},
+    {name: 'Gitlab',icon: Icons.Gitlab},
+    {name: 'Linkedin',icon: Icons.Linkedin},
+    {name: 'Stack Overflow',icon: Icons.StackOverflow},
+    {name: 'Twitch',icon: Icons.Twitch},
+    {name: 'Twitter',icon: Icons.Twitter},
+    {name: 'Youtube',icon: Icons.Youtube},
+  ]
 
   const [links, setLinks] = useState([]);
   const [profile, setProfile] = useState({
@@ -30,6 +34,7 @@ function App() {
   return (
     <>
       <NavBar />
+      
       <Routes>
         <Route
           path="/links"

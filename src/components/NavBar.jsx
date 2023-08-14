@@ -1,24 +1,35 @@
-import {Link} from 'react-router-dom'
+import {NavLink,Link} from 'react-router-dom'
+import * as Icons from '../SvgImports';
 
 function NavBar() {
     return(
         <>
             <div className="NavBar">
                 <div className="NavLogo">
-                    devLinks
+                    <img className='NavLogoImg' src={Icons.LogoDevlinksSmall} alt="LogoDevlinksSmall" />
+                    <h3 className='NavLogoText hide'>devLinks</h3>
                 </div>
                 <div className="NavLinks">
                     <ul>
                         <li>
-                            <Link to="/links">Links</Link>
+                            <NavLink to="/links">
+                                <img className='NavLinksLogo' src={Icons.LinksHeader} alt="NavLinksLogo" />
+                                <h3 className='NavLinksText hide' >Links</h3>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to="/profile">Profile</Link>
+                            <NavLink to="/profile">
+                                <img className='NavProfileLogo' src={Icons.ProfileDetailsHeader} alt="NavProfileLogo" />
+                                <h3 className='NavProfileText hide'>Profile Details</h3>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
                 <div className="PreviewPage">
-                    <Link to="preview">Preview</Link>
+                    <NavLink to="/preview">
+                        <img className='NavPreviewLogo' src={Icons.PreviewHeader} alt="NavPreviewLogo" />
+                        <h3 className='NavPreviewText hide' >Preview</h3>
+                    </NavLink>
                 </div>
             </div>
         </>

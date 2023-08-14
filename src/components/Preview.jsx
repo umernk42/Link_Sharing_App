@@ -4,7 +4,6 @@ function Preview({ links, profile }) {
 
     return (
         <>
-            <br />
             <div className="preview">
                 <div className="previewProfilePic">
                     <img src={profile.profilePic} alt="" style={{ width: 50, height: 50 }} />
